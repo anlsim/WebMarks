@@ -1,0 +1,270 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+:root {
+    --space-cadet: #283044;
+    --air-superiority-blue: #4F5D75;
+    --mint-cream: #ebf5ee;
+    --silver-pink: #bfa89e;
+    --cinereous: #F5AD8E;
+}
+
+.bg-space-cadet {
+    background-color: #283044 !important;
+}
+.bg-air-superiority-blue {
+    background-color: #4F5D75 !important;
+}
+.bg-mint-cream {
+    background-color: #ebf5ee !important;
+}
+.bg-silver-pink {
+    background-color: #bfa89e !important;
+}
+.bg-cinereous {
+    background-color: #F5AD8E !important;
+}
+.fa-star {
+    cursor: pointer;
+}
+@media (min-width: 576px) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+        -webkit-column-gap: 1.25rem;
+        -moz-column-gap: 1.25rem;
+        column-gap: 1.25rem;
+        orphans: 1;
+        widows: 1;
+    }
+
+        .card-columns .card {
+            font-size: 1em;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+            border-radius: .28571429rem;
+            box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+        }
+}
+
+
+.card-columns .card:hover .card-img {
+    opacity: 1;
+}
+
+.card-columns .card-body {
+    height: 150px;
+    background: #F5AD8E;
+}
+
+.card-columns .card-img {
+    height: 190px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .8;
+}
+
+.modal .card-img {
+    height: 150px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+}
+
+.card-img-top {
+    height: 190px;
+    width: 100%;
+    display: flex;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.flex-column {
+    max-width: 260px;
+}
+
+.card-footer {
+    font-size: 1em;
+    position: static;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: .75em 1em;
+    background-color: #BFC0C0;
+    border-top: 1px solid rgba(0, 0, 0, .05) !important;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #BFC0C0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+}
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+}
+
+/* Provide sufficient contrast against white background */
+
+.navbar-light .navbar-brand {
+    color: #FFFFFF !important;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white !important;
+}
+
+.nav.navbar-nav li a {
+    color: white !important;
+}
+
+.text-dark {
+    color: #FFFFFF !important;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #FFFFFF;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+a {
+    color: #283044;
+    
+}
+a:hover {
+    color: #283044;
+   
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #4F5D75;
+    border-color: #4F5D75;
+}
+
+    .btn-primary:hover {
+        color: #FFFFFF;
+        background-color: #636C92;
+        border-color: #636C92;
+    }
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+ 
+/*------------------------------Carousel------------*/
+
+.vertical .carousel-inner {
+    height: 100%;
+}
+
+.carousel.vertical .item {
+    -webkit-transition: 0.6s ease-in-out top;
+    -moz-transition: 0.6s ease-in-out top;
+    -ms-transition: 0.6s ease-in-out top;
+    -o-transition: 0.6s ease-in-out top;
+    transition: 0.6s ease-in-out top;
+    left: 0;
+}
+
+
+.carousel.vertical .active {
+    top: 0;
+}
+
+.carousel.vertical .next {
+    top: 100%;
+}
+
+.carousel.vertical .prev {
+    top: -100%;
+}
+
+    .carousel.vertical .next.left,
+    .carousel.vertical .prev.right {
+        top: 0;
+    }
+
+.carousel.vertical .active.left {
+    top: -100%;
+}
+
+.carousel.vertical .active.right {
+    top: 100%;
+}
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+}

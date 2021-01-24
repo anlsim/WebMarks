@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PinBoard.Models.Board>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="btn-block">
+    <h1 class="display-4">Your Boards</h1>
+</div>
+<hr>
+@{
+    var bCount = Model.Count();
+    if (bCount == 0) {<h4>Create a new board to start adding Web Marks</h4>}
+ }
+
+        <div class="card-columns">
+            @foreach (var item in Model)
+            {
+                <a asp-action="Details" asp-route-id="@item.Id">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </div>
+                    </div>
+                </a>
+            }
+            
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="btn-block">
+                    <h3>
+                        <a asp-action="Create">Create New</a>
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+
+

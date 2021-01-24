@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<PinBoard.Models.Pin>
+
+@{
+    ViewData["Title"] = "Your Book Marks";
+}
+
+<h1>Your Book Marks</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+    <a href="@item.Url">
+    <div class="card">
+        <div class="card-img" style="background-image: url('@item.Image');">
+        </div>
+        <div class="card-header">
+            <h5 class="card-title">@item.Title</h5>
+        </div>
+        <div class="card-footer">
+            <h7>@item.Description</h7>
+        </div>
+        <a href="url('@item.Url')"></a>
+    </div>
+    </a>
+
+
+    }
+</div>
+
+

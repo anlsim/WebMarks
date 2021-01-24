@@ -1,0 +1,51 @@
+﻿@model PinBoard.Models.Board
+
+@{
+    ViewData["Title"] = "Board";
+}
+
+<div class="btn-block">
+    <h1 class="display-4">@Model.Name</h1>
+</div>
+
+<div class="container-fluid">
+    <hr />
+    <div class="row">
+        @if (Model.Pins != null)
+        {
+            foreach (var item in Model.Pins)
+            {
+                if (item.Board.Id == Model.Id)
+                {
+                <div class="col-sm-6 col-md-4 col-lg-3 mt-4">            
+                        <div class="card">
+                            <a href="@item.Url">
+                                <img class="card-img-top" src="@item.Image"></a>
+                                <div class="card-block">
+                                    <h5 class="card-title">@item.Title</h5>
+                                    <div class="card-text">
+                                        @item.Description
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a asp-controller="Pins" asp-action="Edit" asp-route-id="@item.Id">Edit</a> ||
+                                    <a asp-controller="Pins" asp-action="Delete" asp-route-id="@item.Id"> Delete </a>
+                                </div>
+                        </div>                   
+                </div>
+                }
+            }
+        }
+
+        else
+        {
+            <div>
+                <h1>Board is Empty</h1>
+                <h3> <a asp-area="" asp-controller="Pins" asp-action="Create">Add New WebMark</a> </h3>
+            </div>
+        }
+    </div>
+
+    <a asp-action="Index">Back to Boards</a>
+    
+    </div>
