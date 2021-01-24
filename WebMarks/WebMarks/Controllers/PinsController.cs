@@ -91,31 +91,18 @@ namespace PinBoard.Controllers
         // GET: Pins/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-           // DetailsBoardView detailsModel = new DetailsBoardView();
 
-            
-            //var pin = new Pin (_context.Pins.Where(p => p.Id == id));
 
             if (id == null)
             {
                 return NotFound();
             }
 
-            Pin pin = await _context.Pin
+            Pin pin = await _context.Pin.Include(b => b.Board)
               .FirstOrDefaultAsync(m => m.Id == id);
             pin.User = await _userManager.GetUserAsync(User);
-            //pin.Board = _context.Board.Find(id.BoardId);
 
-            // var currentUser = await _userManager.GetUserAsync(User);
-
-            //pin.User = await _userManager.GetUserAsync(User);
-            //var boardId = pin.getBoardId();
-            pin.Board = await _context.Board
-               .FirstOrDefaultAsync(m => m.Id == id);
-            //detailsModel.PinId = (int)id;
-            //var board = await _context.Board.FindAsync()
-     
-
+           
             if (pin == null)
             {
                 return NotFound();

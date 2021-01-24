@@ -2,7 +2,6 @@
 
 @{
 
-    var boardId = Model.Board;
     ViewData["Title"] = "Edit";
 }
 
@@ -54,7 +53,7 @@
 
 <div>
  
-    <a asp-controller="Boards" asp-action="Index">Back to List</a>
+    <a asp-controller="Boards" asp-action="Details" asp-route-id="@Model.Board.Id">Back to List</a>
         
 </div>
 

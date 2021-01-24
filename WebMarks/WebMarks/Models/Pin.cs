@@ -48,9 +48,10 @@ namespace PinBoard.Models
         }
 
         public void GetMeta(string url) {
-
-            if (!url.StartsWith("http://", StringComparison.OrdinalIgnoreCase)) {
-                url = "http://" + url;
+            string fixer = "https://";
+            if (!url.StartsWith(fixer, StringComparison.Ordinal))
+            {
+                url = "https://" + url;
             }
                 var website = new HtmlWeb();
                 HtmlDocument document = website.Load(url);
