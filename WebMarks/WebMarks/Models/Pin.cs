@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+
 using HtmlAgilityPack;
 
 namespace PinBoard.Models
@@ -48,10 +44,10 @@ namespace PinBoard.Models
         }
 
         public void GetMeta(string url) {
-            string fixer = "https://";
-            if (!url.StartsWith(fixer, StringComparison.Ordinal))
+           
+            if (!url.Contains("https://") && !url.Contains("http://"))
             {
-                url = "https://" + url;
+                url = "http://" + url;
             }
                 var website = new HtmlWeb();
                 HtmlDocument document = website.Load(url);
