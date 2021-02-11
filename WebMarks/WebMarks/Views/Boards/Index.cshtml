@@ -13,20 +13,19 @@
     if (bCount == 0) {<h4>Create a new board to start adding Web Marks</h4>}
  }
 
-        <div class="card-columns">
+        <div class="boardlist">
             @foreach (var item in Model)
             {
+            <div class="board">
                 <a asp-action="Details" asp-route-id="@item.Id">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                            </td>
-                        </div>
-                    </div>
+
+                    <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
                 </a>
+            </div>
             }
             
         </div>

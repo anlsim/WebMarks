@@ -8,6 +8,37 @@ for details on configuring this project to bundle and minify static web assets. 
     --silver-pink: #bfa89e;
     --cinereous: #F5AD8E;
 }
+.boardlist {
+    margin-right: -2px;
+    margin-bottom: 20px;
+    -ms-column-gap: 10px;
+    -moz-column-gap: 10px;
+    -webkit-column-gap: 10px;
+    column-gap: 5px;
+    -ms-column-width: 250px;
+    -moz-column-width: 250px;
+    -webkit-column-width: 250px;
+    column-width: 250px;
+    position: relative;
+    display: block;
+}
+.board {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 130px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: #F5AD8E !important;
+    -moz-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    -webkit-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
+    will-change: opacity;
+}
 
 .bg-space-cadet {
     background-color: #283044 !important;
@@ -131,7 +162,6 @@ for details on configuring this project to bundle and minify static web assets. 
     line-height: 1.2857em;
 }
 
-/* Provide sufficient contrast against white background */
 
 .navbar-light .navbar-brand {
     color: #FFFFFF !important;
