@@ -13,9 +13,21 @@
     if (bCount == 0) {<h4>Create a new board to start adding Web Marks</h4>}
  }
 
-        <div class="boardlist">
-            @foreach (var item in Model)
-            {
+    <div class="row">
+        <div class="col-md-4">
+            <div class="btn-block">
+                <h3>
+                    <a asp-action="Create">Create New</a>
+                </h3>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="boardlist">
+        @foreach (var item in Model)
+        {
             <div class="board">
                 <a asp-action="Details" asp-route-id="@item.Id">
 
@@ -26,19 +38,9 @@
 
                 </a>
             </div>
-            }
-            
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="btn-block">
-                    <h3>
-                        <a asp-action="Create">Create New</a>
-                    </h3>
-                </div>
-            </div>
+        }
 
-        </div>
+    </div>
+    
 
 
